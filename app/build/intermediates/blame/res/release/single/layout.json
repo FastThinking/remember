@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\build\\intermediates\\res\\merged\\release\\layout\\activity_exception_dialog.xml",
+        "source": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\src\\main\\res\\layout\\activity_exception_dialog.xml"
+    },
+    {
+        "merged": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\build\\intermediates\\res\\merged\\release\\layout\\password_add.xml",
+        "source": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\src\\main\\res\\layout\\password_add.xml"
+    },
+    {
+        "merged": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\build\\intermediates\\res\\merged\\release\\layout\\lv_password_item.xml",
+        "source": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\src\\main\\res\\layout\\lv_password_item.xml"
+    },
+    {
+        "merged": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\build\\intermediates\\res\\merged\\release\\layout\\start.xml",
+        "source": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\src\\main\\res\\layout\\start.xml"
+    },
+    {
+        "merged": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\build\\intermediates\\res\\merged\\release\\layout\\login.xml",
+        "source": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\src\\main\\res\\layout\\login.xml"
+    },
+    {
+        "merged": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\build\\intermediates\\res\\merged\\release\\layout\\password_list.xml",
+        "source": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\src\\main\\res\\layout\\password_list.xml"
+    },
+    {
+        "merged": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\build\\intermediates\\res\\merged\\release\\layout\\input_key.xml",
+        "source": "C:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\src\\main\\res\\layout\\input_key.xml"
+    }
+]

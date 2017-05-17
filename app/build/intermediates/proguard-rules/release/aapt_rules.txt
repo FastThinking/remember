@@ -1,0 +1,18 @@
+# view AndroidManifest.xml #generated:18
+-keep class com.lzx.allenLee.AppApplication { <init>(...); }
+
+# view AndroidManifest.xml #generated:35
+-keep class com.lzx.allenLee.base.AlertDialogAcitivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:32
+-keep class com.lzx.allenLee.ui.Act_login { <init>(...); }
+
+# view AndroidManifest.xml #generated:23
+-keep class com.lzx.allenLee.ui.Act_start { <init>(...); }
+
+# view AndroidManifest.xml #generated:41
+-keep class com.lzx.allenLee.ui.PasswordAddActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:38
+-keep class com.lzx.allenLee.ui.PasswordListActivity { <init>(...); }
+

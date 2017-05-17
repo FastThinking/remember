@@ -1,0 +1,282 @@
+com.lzx.allenLee.AppApplication:
+    private static com.lzx.allenLee.AppApplication instance
+    38:41:public static com.lzx.allenLee.AppApplication getInstance()
+    119:136:private void copyAssetsToSD(java.lang.String,java.lang.String)
+com.lzx.allenLee.BuildConfig
+com.lzx.allenLee.R
+com.lzx.allenLee.R$anim
+com.lzx.allenLee.R$array
+com.lzx.allenLee.R$attr
+com.lzx.allenLee.R$color
+com.lzx.allenLee.R$dimen
+com.lzx.allenLee.R$drawable
+com.lzx.allenLee.R$id
+com.lzx.allenLee.R$layout
+com.lzx.allenLee.R$string
+com.lzx.allenLee.R$style
+com.lzx.allenLee.R$styleable
+com.lzx.allenLee.base.AlertDialogAcitivity:
+    public static final java.lang.String ALERT_MSG
+com.lzx.allenLee.base.AppActivityManager:
+    public static final int BASESTART
+    public static final int DESKTOPSTART
+    public static final int USERDESKTOPSTART
+    public static final int WELCOMESTART
+    16:16:public AppActivityManager()
+    45:50:public static void addSwActivity(android.app.Activity)
+    56:61:public static void clearActivity()
+    71:71:public static java.util.ArrayList getActivitys()
+    75:75:public static com.lzx.allenLee.global.Global getGlobalInfo()
+    79:83:public static android.app.Activity getHomeActivity()
+    87:91:public static android.app.Activity getLastActivity()
+    111:117:public static void goHome()
+    153:159:public static void removeActivity(int)
+    176:182:public static void removeAllActivity()
+com.lzx.allenLee.base.BaseActivity:
+    150:158:public boolean hasInternetConnected()
+    166:182:public boolean validateInternet()
+    190:196:public boolean hasLocationGPS()
+    205:211:public boolean hasLocationNetWork()
+    220:246:public void checkMemoryCard()
+    252:274:public void openWirelessSet()
+    280:285:public void closeInput()
+    368:371:public void gotoExistActivity(java.lang.Class)
+    390:391:public void toast(int)
+    399:400:public void toast(java.lang.String)
+    409:409:public java.lang.String getStr(int)
+    419:419:public java.lang.String getStr(android.widget.EditText)
+com.lzx.allenLee.base.BaseActivity$3
+com.lzx.allenLee.base.BaseActivity$4
+com.lzx.allenLee.base.BaseActivity$5
+com.lzx.allenLee.base.BaseActivity$6
+com.lzx.allenLee.base.CrashHandler:
+    public static final java.lang.String TAG
+    private android.app.AlertDialog alertDialog
+com.lzx.allenLee.base.IBaseActivity
+com.lzx.allenLee.global.AppConstant:
+    public static final java.lang.String apkName
+    public static final java.lang.String decodeApkName
+    13:13:public AppConstant()
+    38:38:public static java.lang.String getProjectPackage(android.content.Context)
+    48:50:public static void init(android.content.Context)
+com.lzx.allenLee.global.Global:
+    public static int screenDrawH
+    public java.lang.String currentApp_
+    public boolean forceupdate_
+    public boolean isFullScreen_
+    public boolean isLandscape
+    public boolean isNormalScreen_
+    public boolean isOffLine_
+    public boolean isSet_
+    public java.lang.String rewriteURI_
+    public java.lang.String seriesNum_
+    public int systemMenuHeight_
+    public int systemViewHeight_
+    public java.lang.String version_
+    161:161:public static java.lang.String getFileRootPath_()
+    339:339:public void loadApn(android.content.Context)
+com.lzx.allenLee.os.AppConstant:
+    public static final java.lang.String apkName
+    public static final java.lang.String decodeApkName
+    15:15:public AppConstant()
+    29:29:public static java.lang.String getProjectName(android.content.Context)
+com.lzx.allenLee.os.DeviceInfo:
+    private java.lang.String deviceName
+    private java.lang.String language
+    private boolean netConnect
+    private java.lang.String netExtraType
+    private java.lang.String resolution
+    private java.lang.String simId
+    34:34:public float getDensity()
+    39:39:public java.lang.String getDeviceIMEI()
+    44:44:public java.lang.String getDeviceIMSI()
+    49:49:public java.lang.String getDeviceId()
+    54:54:public java.lang.String getDeviceName()
+    59:59:public java.lang.String getFirmware()
+    64:64:public java.lang.String getLanguage()
+    69:69:public java.lang.String getNetExtraType()
+    74:74:public int getNetType()
+    79:79:public java.lang.String getResolution()
+    84:84:public int getScreenHeight()
+    89:89:public int getScreenWidth()
+    94:94:public java.lang.String getSdkVersion()
+    99:99:public java.lang.String getSimId()
+    121:121:public boolean isNetConnect()
+com.lzx.allenLee.service.UserPasswordManager:
+    311:311:public boolean createKeyFile(java.lang.String)
+com.lzx.allenLee.serviceDao.AppServiceDao
+com.lzx.allenLee.serviceDao.AppServiceManager
+com.lzx.allenLee.ui.Act_login:
+    private android.os.Handler mHandler
+com.lzx.allenLee.util.ActivityUtil:
+    17:17:public ActivityUtil()
+    56:63:public static boolean DirectToNewTaskActivity(android.app.Activity,java.lang.Class)
+    96:96:private static void addShortcut(android.content.Context,java.lang.String,java.lang.String,java.lang.String)
+    118:118:public static void addShortcut(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.Class)
+    121:121:public static android.util.DisplayMetrics getDisplayInfo(android.app.Activity)
+    130:236:public static void getMemoryInfo(android.content.Context,boolean)
+    246:247:public static java.lang.String getPreference(android.content.Context,java.lang.String,java.lang.String)
+    260:265:public static int getVersionCode(android.content.Context)
+    270:270:public static void intoFlashActivity(android.content.Context)
+    274:305:public static int jsStartActivity(android.content.Context,java.lang.String[],boolean)
+    318:323:public static void savePreference(android.content.Context,java.lang.String,java.lang.String)
+    327:332:public static void savePreference(android.content.Context,java.lang.String,boolean)
+    340:341:public static void setFullscreen(android.app.Activity)
+    349:350:public static void setInputMethodHidden(android.app.Activity)
+com.lzx.allenLee.util.DialogUtil
+com.lzx.allenLee.util.DialogUtil$1
+com.lzx.allenLee.util.UIHelper:
+    public static final int DIRECTION_NEXT
+    public static final int DIRECTION_PREVIOUS
+    private java.lang.Runnable runnable
+    46:46:public UIHelper()
+    60:68:public static void flipNum(android.content.Context,android.widget.ViewFlipper,int,int)
+    71:74:public static void flipPrevious(android.content.Context,android.widget.ViewFlipper)
+    77:80:public static void flipNext(android.content.Context,android.widget.ViewFlipper)
+    91:99:public static void setAnimation(android.content.Context,android.widget.ViewAnimator,boolean)
+    107:117:public static void setFullScreen(android.app.Activity)
+    123:129:public static void toogleSystemBar(android.app.Activity)
+    139:149:public static void toogleVisibility(android.view.View,boolean)
+    160:163:public static void makeToast(android.content.Context,java.lang.CharSequence,boolean)
+    166:167:public static void makeToast(android.content.Context,java.lang.CharSequence)
+    178:181:public static void makeToast(android.content.Context,int,boolean)
+    187:188:public static int dip2px(android.content.Context,float)
+    195:196:public static int px2dip(android.content.Context,float)
+    210:211:public static void setPadding(android.content.Context,android.widget.Button,float,float,float,float)
+    214:215:public static void setPadding(android.content.Context,android.widget.EditText,float,float,float,float)
+    218:234:public static void setListViewHeightBasedOnChildren(android.widget.ListView)
+    238:240:public static int getDisplayWidth(android.app.Activity)
+    247:248:public static int getDisplayHeight(android.content.Context)
+    255:256:public static int getDisplayWidth(android.content.Context)
+    263:265:public static int getDisplayHeight(android.app.Activity)
+    274:276:public static void hideSoftInputFromWindow(android.app.Activity)
+    284:286:public static void hideSoftInputFromWindow(android.view.View)
+    296:299:public static varargs void setTextColor(boolean,android.widget.TextView[])
+    309:315:public static varargs void setListItemSelected(boolean,android.view.View,android.widget.TextView[])
+    326:333:public static varargs void setBackgroundColor(android.content.Context,boolean,android.widget.TextView[])
+    363:369:public static void shareText(android.content.Context,java.lang.String,java.lang.String)
+    372:374:public static void openExplorer(android.content.Context,java.lang.String)
+    379:415:public void setButtonDrawableCenter(android.content.Context,android.widget.Button,int,int)
+    46:46:static synthetic java.lang.Runnable access$000(com.lzx.allenLee.util.UIHelper)
+com.lzx.allenLee.util.UIHelper$1
+com.lzx.allenLee.util.apnUtil.ApnAdapter
+com.lzx.allenLee.util.apnUtil.ApnBean
+com.lzx.allenLee.util.apnUtil.ApnUtil
+com.lzx.allenLee.util.createShotCut.CreateShotCut
+com.lzx.allenLee.util.databaseUtil.AppDBOpenHelper
+com.lzx.allenLee.util.databaseUtil.BasicDBManager:
+    public static final java.lang.String db_user_info
+    22:40:public BasicDBManager(android.database.sqlite.SQLiteOpenHelper)
+    130:150:protected boolean addTableColumn(java.lang.String,java.util.List)
+    241:242:public void setDb(android.database.sqlite.SQLiteDatabase)
+com.lzx.allenLee.util.databaseUtil.Column
+com.lzx.allenLee.util.databaseUtil.DataBaseManager:
+    78:80:public void closeDb()
+com.lzx.allenLee.util.encryptionUtil.Coder:
+    public static final java.lang.String KEY_SHA
+    public static final java.lang.String KEY_MD5
+    public static final java.lang.String KEY_MAC
+    19:19:public Coder()
+    69:72:public static byte[] encryptMD5(byte[])
+    85:88:public static byte[] encryptSHA(byte[])
+    99:102:public static java.lang.String initMacKey()
+    115:119:public static byte[] encryptHMAC(byte[],java.lang.String)
+com.lzx.allenLee.util.encryptionUtil.DESCoder:
+    public static final java.lang.String ALGORITHM
+    31:31:public DESCoder()
+    113:113:public static java.lang.String initKey()
+    124:136:public static java.lang.String initKey(java.lang.String)
+com.lzx.allenLee.util.encryptionUtil.EncryptUtil:
+    11:13:public EncryptUtil()
+com.lzx.allenLee.util.fileManager.FileUtil:
+    29:29:public FileUtil()
+    89:124:public static boolean getFileFromUrl(java.lang.String,java.lang.String)
+    134:163:public static byte[] getFileByteArrayFromURL(java.lang.String)
+    173:193:public static byte[] readInputStreamAsByteArray(java.io.InputStream)
+    202:203:public android.graphics.Bitmap getBitmap(java.lang.String,android.content.Context)
+    292:302:public static java.util.List getSubFiles(java.lang.String)
+    312:335:public static boolean deleteDirectoryFiles(java.lang.String)
+    346:364:public static boolean ifContainChildrenFiles(java.lang.String)
+org.greenrobot.eventbus.EventBus:
+    90:90:public static org.greenrobot.eventbus.EventBusBuilder builder()
+    95:97:public static void clearCaches()
+    204:204:public synchronized boolean isRegistered(java.lang.Object)
+    268:281:public void cancelEventDelivery(java.lang.Object)
+    288:293:public void postSticky(java.lang.Object)
+    301:303:public java.lang.Object getStickyEvent(java.lang.Class)
+    312:314:public java.lang.Object removeStickyEvent(java.lang.Class)
+    323:332:public boolean removeStickyEvent(java.lang.Object)
+    339:342:public void removeAllStickyEvents()
+    345:359:public boolean hasSubscriberForEvent(java.lang.Class)
+org.greenrobot.eventbus.EventBus$PostCallback
+org.greenrobot.eventbus.EventBusBuilder:
+    java.util.List skipMethodVerificationForClasses
+    49:50:public org.greenrobot.eventbus.EventBusBuilder logSubscriberExceptions(boolean)
+    55:56:public org.greenrobot.eventbus.EventBusBuilder logNoSubscriberMessages(boolean)
+    61:62:public org.greenrobot.eventbus.EventBusBuilder sendSubscriberExceptionEvent(boolean)
+    67:68:public org.greenrobot.eventbus.EventBusBuilder sendNoSubscriberEvent(boolean)
+    78:79:public org.greenrobot.eventbus.EventBusBuilder throwSubscriberException(boolean)
+    92:93:public org.greenrobot.eventbus.EventBusBuilder eventInheritance(boolean)
+    102:103:public org.greenrobot.eventbus.EventBusBuilder executorService(java.util.concurrent.ExecutorService)
+    112:116:public org.greenrobot.eventbus.EventBusBuilder skipMethodVerificationFor(java.lang.Class)
+    121:122:public org.greenrobot.eventbus.EventBusBuilder ignoreGeneratedIndex(boolean)
+    127:128:public org.greenrobot.eventbus.EventBusBuilder strictMethodVerification(boolean)
+    133:137:public org.greenrobot.eventbus.EventBusBuilder addIndex(org.greenrobot.eventbus.meta.SubscriberInfoIndex)
+    147:154:public org.greenrobot.eventbus.EventBus installDefaultEventBus()
+    159:159:public org.greenrobot.eventbus.EventBus build()
+org.greenrobot.eventbus.SubscriberMethodFinder:
+    private static final int BRIDGE
+    private static final int SYNTHETIC
+    private static final int MODIFIERS_IGNORE
+    private static final int POOL_SIZE
+    188:189:static void clearCaches()
+org.greenrobot.eventbus.meta.AbstractSubscriberInfo
+org.greenrobot.eventbus.meta.SimpleSubscriberInfo
+org.greenrobot.eventbus.meta.SubscriberInfo:
+    public abstract boolean shouldCheckSuperclass()
+org.greenrobot.eventbus.meta.SubscriberMethodInfo
+org.greenrobot.eventbus.util.AsyncExecutor
+org.greenrobot.eventbus.util.AsyncExecutor$1
+org.greenrobot.eventbus.util.AsyncExecutor$Builder
+org.greenrobot.eventbus.util.AsyncExecutor$RunnableEx
+org.greenrobot.eventbus.util.ErrorDialogConfig:
+    31:41:public ErrorDialogConfig(android.content.res.Resources,int,int)
+    44:45:public org.greenrobot.eventbus.util.ErrorDialogConfig addMapping(java.lang.Class,int)
+    59:60:public void setDefaultDialogIconId(int)
+    63:64:public void setDefaultEventTypeOnDialogClosed(java.lang.Class)
+    67:68:public void disableExceptionLogging()
+    71:72:public void setTagForLoggingExceptions(java.lang.String)
+    75:76:public void setEventBus(org.greenrobot.eventbus.EventBus)
+org.greenrobot.eventbus.util.ErrorDialogFragmentFactory:
+    31:33:protected ErrorDialogFragmentFactory(org.greenrobot.eventbus.util.ErrorDialogConfig)
+org.greenrobot.eventbus.util.ErrorDialogFragmentFactory$Honeycomb
+org.greenrobot.eventbus.util.ErrorDialogFragmentFactory$Support
+org.greenrobot.eventbus.util.ErrorDialogFragments:
+    32:80:public ErrorDialogFragments()
+org.greenrobot.eventbus.util.ErrorDialogFragments$Support
+org.greenrobot.eventbus.util.ErrorDialogManager:
+    protected static final java.lang.String TAG_ERROR_DIALOG
+    protected static final java.lang.String TAG_ERROR_DIALOG_MANAGER
+    public static final java.lang.String KEY_TITLE
+    public static final java.lang.String KEY_MESSAGE
+    public static final java.lang.String KEY_FINISH_AFTER_DIALOG
+    public static final java.lang.String KEY_ICON_ID
+    public static final java.lang.String KEY_EVENT_TYPE_ON_CLOSE
+    46:118:public ErrorDialogManager()
+    191:192:public static void attachTo(android.app.Activity)
+    196:197:public static void attachTo(android.app.Activity,boolean)
+    201:203:public static void attachTo(android.app.Activity,boolean,android.os.Bundle)
+    206:214:public static void attachTo(android.app.Activity,java.lang.Object,boolean,android.os.Bundle)
+    217:238:private static boolean isSupportActivity(android.app.Activity)
+org.greenrobot.eventbus.util.ErrorDialogManager$HoneycombManagerFragment:
+    163:174:public static void attachTo(android.app.Activity,java.lang.Object,boolean,android.os.Bundle)
+org.greenrobot.eventbus.util.ErrorDialogManager$SupportManagerFragment
+org.greenrobot.eventbus.util.ExceptionToResourceMapping:
+    38:40:public ExceptionToResourceMapping()
+    86:87:public org.greenrobot.eventbus.util.ExceptionToResourceMapping addMapping(java.lang.Class,int)
+org.greenrobot.eventbus.util.HasExecutionScope
+org.greenrobot.eventbus.util.ThrowableFailureEvent:
+    27:30:public ThrowableFailureEvent(java.lang.Throwable)
+    36:39:public ThrowableFailureEvent(java.lang.Throwable,boolean)
+    42:42:public java.lang.Throwable getThrowable()
+    54:55:public void setExecutionScope(java.lang.Object)

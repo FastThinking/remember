@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+android {
+    signingConfigs {
+        allenKey {
+            keyAlias 'allen.li'
+            storeFile file('C:/work/studio_workspace/from_git/allenApp.key')
+            keyPassword 'tiger@1986'
+            storePassword 'tiger@1986'
+        }
+    }
+    compileSdkVersion 19
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.lzx.allenLee"
+        minSdkVersion 19
+        targetSdkVersion 23
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.allenKey
+        }
+        debug {
+            signingConfig signingConfigs.allenKey
+        }
+    }
+    dexOptions {
+        incremental true
+    }
+}
+
+dependencies {
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile files('libs/commons-codec-1.7.jar')
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="0dip"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="未找到密钥文件，请输入密钥，长度为6-20个字符，不允许有空格。"
+        android:textSize="20dip" />
+
+    <EditText
+        android:id="@+id/et_userKey"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text=""
+        android:textSize="20dip" />
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_config_read_mode_value">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <color name="audio_bg_color">#77c0c0c0</color>
+    <color name="bg_click_color">#776c88ae</color>
+    <color name="bg_color">#ffededee</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="click_color">#ff6c88ae</color>
+    <color name="copyright_color">#ff999999</color>
+    <color name="darkblue">#ff3E5E00</color>
+    <color name="darkgray">#99333333</color>
+    <color name="divider_color">#eecbcbcb</color>
+    <color name="full_transparent">#00000000</color>
+    <color name="gray">#ff666666</color>
+    <color name="green">#ff008800</color>
+    <color name="hint_color">#ffc0c0c0</color>
+    <color name="lightgray">#eeaaaaaa</color>
+    <color name="list_background">#ffffff</color>
+    <color name="list_item_focused">#0097fe</color>
+    <color name="lucid">#66666666</color>
+    <color name="nav_shadow_color">#ffe4e4e4</color>
+    <color name="nocolor">#00000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffffff</color>
+    <declare-styleable name="cn.domob.android.ads.DomobAdView"><attr format="color" name="backgroundColor"/><attr format="color" name="primaryTextColor"/><attr format="string" name="keywords"/><attr format="string" name="spots"/><attr format="integer" name="refreshInterval"/></declare-styleable>
+    <dimen name="body_progressbar_width">50dip</dimen>
+    <dimen name="bottom_tab_padding_drawable">0.0dip</dimen>
+    <dimen name="bottom_tab_padding_up">1.0dip</dimen>
+    <dimen name="btn_back_height">30dip</dimen>
+    <dimen name="btn_back_margin_left">10dip</dimen>
+    <dimen name="dip10">10dip</dimen>
+    <dimen name="dip200">200dip</dimen>
+    <dimen name="dip50">50dip</dimen>
+    <dimen name="divider_height">2.0px</dimen>
+    <dimen name="font_size_10">10sp</dimen>
+    <dimen name="font_size_12">12sp</dimen>
+    <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="header_banner_height">30dip</dimen>
+    <dimen name="header_height">180dip</dimen>
+    <dimen name="header_image_height">150dip</dimen>
+    <dimen name="text_middlesize">18sp</dimen>
+    <dimen name="text_size_10">10.0sp</dimen>
+    <dimen name="text_size_11">11.0sp</dimen>
+    <dimen name="text_size_12">12.0sp</dimen>
+    <dimen name="text_size_13">13.0sp</dimen>
+    <dimen name="text_size_14">14.0sp</dimen>
+    <dimen name="text_size_15">15.0sp</dimen>
+    <dimen name="text_size_16">16.0sp</dimen>
+    <dimen name="text_size_17">17.0sp</dimen>
+    <dimen name="text_size_18">18.0sp</dimen>
+    <dimen name="text_size_19">19.0sp</dimen>
+    <dimen name="text_size_20">20.0sp</dimen>
+    <dimen name="text_size_21">21.0sp</dimen>
+    <dimen name="text_size_22">22.0sp</dimen>
+    <dimen name="text_size_23">23.0sp</dimen>
+    <dimen name="text_size_24">24.0sp</dimen>
+    <dimen name="text_size_25">25.0sp</dimen>
+    <dimen name="text_size_26">26.0sp</dimen>
+    <dimen name="text_size_27">27.0sp</dimen>
+    <dimen name="text_size_28">28.0sp</dimen>
+    <dimen name="text_size_29">29.0sp</dimen>
+    <dimen name="text_size_30">30.0sp</dimen>
+    <dimen name="text_size_31">31.0sp</dimen>
+    <dimen name="text_size_32">32.0sp</dimen>
+    <dimen name="text_size_7">7.0sp</dimen>
+    <dimen name="text_size_8">8.0sp</dimen>
+    <dimen name="text_size_9">9.0sp</dimen>
+    <dimen name="text_smallsize">16sp</dimen>
+    <dimen name="top_bar_height">45dip</dimen>
+    <dimen name="top_bar_progressbar_margin_right">10dip</dimen>
+    <dimen name="top_bar_progressbar_width">20dip</dimen>
+    <dimen name="txt_app_title">22sp</dimen>
+    <item name="transparent" type="drawable">#00000000</item>
+    <string name="app_name">love</string>
+    <string name="cancel">取消</string>
+    <string name="download">下载</string>
+    <string name="finish">完成</string>
+    <string name="option_add">添加</string>
+    <string name="option_update">修改</string>
+    <string name="packageName">com.lzx.allenLee</string>
+    <string name="password_add">添加密码</string>
+    <string name="password_update">修改密码</string>
+    <string name="projectName">remember</string>
+    <string name="save">保存</string>
+    <string name="sure">确定</string>
+    <string name="update">升级</string>
+    <style name="ContentOverlay" parent="@android:style/Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+    <style name="listview_style">
+		<item name="android:cacheColorHint">@color/bg_color</item>
+		<item name="android:divider">@drawable/line</item>
+		<item name="android:dividerHeight">1dip</item>		
+		<item name="android:fadingEdge">none</item>
+		<item name="android:fastScrollEnabled">true</item>
+		<item name="android:focusable">true</item>
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">fill_parent</item>
+	</style>
+    <style name="txt_app_title_style">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/txt_app_title</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">@dimen/btn_back_height</item>
+		<item name="android:shadowColor">#0F4689</item>
+		<item name="android:shadowDx">1</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">3</item>
+	</style>
+</resources>

@@ -1,0 +1,1 @@
+CREATE TABLE t_user(userId INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT,userName TEXT,password TEXT,isLogin TEXT,groupId INTEGER)

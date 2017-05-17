@@ -1,0 +1,4 @@
+#Mon May 15 16:43:49 CST 2017
+base.0=C\:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\work\\studio_workspace\\from_git\\remember_studio_5.15\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main\\classes.dex

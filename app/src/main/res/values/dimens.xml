@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dimen:尺寸设置 -->
+<resources>
+    <!-- 标题大小 -->
+	<dimen name="txt_app_title">22sp</dimen>
+	<!-- sp单位字体大小 -->
+	<dimen name="font_size_10">10sp</dimen>
+	<dimen name="font_size_12">12sp</dimen>
+	<dimen name="font_size_14">14sp</dimen>
+	<dimen name="font_size_16">16sp</dimen>
+	<dimen name="bottom_tab_padding_drawable">0.0dip</dimen>
+	<dimen name="bottom_tab_padding_up">1.0dip</dimen>
+	<!-- 头部banner高度 -->
+	<dimen name="header_height">180dip</dimen>
+	<dimen name="header_image_height">150dip</dimen>
+	<dimen name="header_banner_height">30dip</dimen>
+	
+	<dimen name="top_bar_height">45dip</dimen>
+	<dimen name="top_bar_progressbar_margin_right">10dip</dimen>
+	<dimen name="top_bar_progressbar_width">20dip</dimen>
+	<dimen name="body_progressbar_width">50dip</dimen>
+	<!-- 返回按钮高度和外边距 -->
+	<dimen name="btn_back_height">30dip</dimen>
+	<dimen name="btn_back_margin_left">10dip</dimen>
+	<!-- dip单位大小 -->
+	<dimen name="dip10">10dip</dimen>
+	<dimen name="dip50">50dip</dimen>
+	<dimen name="dip200">200dip</dimen>
+	<!-- 分割线高度 -->
+	<dimen name="divider_height">2.0px</dimen>
+	
+	<dimen name="text_size_32">32.0sp</dimen>
+    <dimen name="text_size_31">31.0sp</dimen>
+    <dimen name="text_size_30">30.0sp</dimen>
+    <dimen name="text_size_29">29.0sp</dimen>
+    <dimen name="text_size_28">28.0sp</dimen>
+    <dimen name="text_size_27">27.0sp</dimen>
+    <dimen name="text_size_26">26.0sp</dimen>
+    <dimen name="text_size_25">25.0sp</dimen>
+    <dimen name="text_size_24">24.0sp</dimen>
+    <dimen name="text_size_23">23.0sp</dimen>
+    <dimen name="text_size_22">22.0sp</dimen>
+    <dimen name="text_size_21">21.0sp</dimen>
+    <dimen name="text_size_20">20.0sp</dimen>
+    <dimen name="text_size_19">19.0sp</dimen>
+    <dimen name="text_size_18">18.0sp</dimen>
+    <dimen name="text_size_17">17.0sp</dimen>
+    <dimen name="text_size_16">16.0sp</dimen>
+    <dimen name="text_size_15">15.0sp</dimen>
+    <dimen name="text_size_14">14.0sp</dimen>
+    <dimen name="text_size_13">13.0sp</dimen>
+    <dimen name="text_size_12">12.0sp</dimen>
+    <dimen name="text_size_11">11.0sp</dimen>
+    <dimen name="text_size_10">10.0sp</dimen>
+    <dimen name="text_size_9">9.0sp</dimen>
+    <dimen name="text_size_8">8.0sp</dimen>
+    <dimen name="text_size_7">7.0sp</dimen>
+    <dimen name="text_smallsize">16sp</dimen>
+    <dimen name="text_middlesize">18sp</dimen>
+</resources>

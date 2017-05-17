@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\allen\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="C:\work\studio_workspace\from_git\remember_studio_5.15\app\build\intermediates\pre-dexed\debug\eventbus-3.0.0_eef32721ebf9ba9445f7ad604349b5b99ddba21c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\work\studio_workspace\from_git\remember_studio_5.15\app\libs\commons-codec-1.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9cd61d269c88f9fb0eb36cea1efcd596ab74772f">
+        <dex dex="C:\work\studio_workspace\from_git\remember_studio_5.15\app\build\intermediates\pre-dexed\debug\commons-codec-1.7_c024e6f2a6217908cef148d6a43f75e4596601bd.jar" />
+    </item>
+
+</items>
