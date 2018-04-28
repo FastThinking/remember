@@ -21,19 +21,18 @@ public class Act_start extends BaseActivity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.start);
+        initView();
         RxPermissions rxPermissions = new RxPermissions(this);
         rxPermissions.request(Manifest.permission.READ_PHONE_STATE)
                 .subscribe(granted -> {
                     if (granted) {
                         initSysInfo();
+                        init();
                     } else {
                         UIHelper.makeToast(getApplicationContext(), "请允许相关权");
-                        finish();
                     }
                 });
-        setContentView(R.layout.start);
-        initView();
-        init();
     }
 
     /**

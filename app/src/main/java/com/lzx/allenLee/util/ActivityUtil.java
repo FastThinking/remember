@@ -6,6 +6,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Process;
 import android.util.DisplayMetrics;
@@ -15,64 +16,66 @@ import com.lzx.allenLee.os.AppConstant;
 
 
 public class ActivityUtil {
-	/**
-	 * 获取软件版本
-	 * 
-	 * @param paramContext
-	 * @return
-	 */
-	public static String getSoftwareVersion(Context paramContext) {
-		String packageName = AppConstant.getProjectPackage(paramContext);
-		try {
-			String softwareVersion = paramContext.getPackageManager().getPackageInfo(packageName,
-					PackageManager.GET_UNINSTALLED_PACKAGES).versionName;
-			return softwareVersion;
-		} catch (PackageManager.NameNotFoundException localNameNotFoundException) {
+    /**
+     * 获取软件版本
+     *
+     * @param paramContext
+     * @return
+     */
+    public static String getSoftwareVersion(Context paramContext) {
+        try {
+            PackageInfo packageInfo = paramContext.getApplicationContext()
+                    .getPackageManager()
+                    .getPackageInfo(paramContext.getPackageName(), 0);
+            String softwareVersion = packageInfo.versionName;
+            return softwareVersion;
+        } catch (PackageManager.NameNotFoundException localNameNotFoundException) {
+            return "";
+        }
+    }
 
-			return "";
-		}
+    /**
+     * 直接打开Activity
+     *
+     * @param paramContext
+     * @param paramClass
+     * @return
+     */
+    public static boolean DirectToActivity(Context paramContext,
+                                           Class<?> paramClass) {
+        paramContext.startActivity(new Intent(paramContext, paramClass));
+        return true;
+    }
 
-	}
-	
-	/**
-	 * 直接打开Activity
-	 * @param paramContext
-	 * @param paramClass
-	 * @return
-	 */
-	public static boolean DirectToActivity(Context paramContext,
-			Class<?> paramClass) {
-		paramContext.startActivity(new Intent(paramContext, paramClass));
-		return true;
-	}
-	/**
-	 * restart app
-	 * @param currentActivity
-	 * @param paramClass
-	 * @return
-	 */
-	public static boolean DirectToNewTaskActivity(Activity currentActivity,
-			Class<?> paramClass) {
-		Intent localIntent = new Intent(currentActivity, paramClass);
-		localIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		currentActivity.startActivity(localIntent);
-		//exit APP
-		Process.killProcess(Process.myPid());
-		currentActivity.finish();
-		System.exit(0);
-		return true;
-	}
+    /**
+     * restart app
+     *
+     * @param currentActivity
+     * @param paramClass
+     * @return
+     */
+    public static boolean DirectToNewTaskActivity(Activity currentActivity,
+                                                  Class<?> paramClass) {
+        Intent localIntent = new Intent(currentActivity, paramClass);
+        localIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        currentActivity.startActivity(localIntent);
+        //exit APP
+        Process.killProcess(Process.myPid());
+        currentActivity.finish();
+        System.exit(0);
+        return true;
+    }
 
-	/**
-	 * 添加快捷方式
-	 * 
-	 * @param paramContext
-	 * @param paramString1
-	 * @param paramString2
-	 * @param paramString3
-	 */
-	private static void addShortcut(Context paramContext, String paramString1,
-			String paramString2, String paramString3) {
+    /**
+     * 添加快捷方式
+     *
+     * @param paramContext
+     * @param paramString1
+     * @param paramString2
+     * @param paramString3
+     */
+    private static void addShortcut(Context paramContext, String paramString1,
+                                    String paramString2, String paramString3) {
 	/*	Intent localIntent1 = new Intent("android.intent.action.MAIN");
 		localIntent1.addCategory("android.intent.category.LAUNCHER");
 		localIntent1.setClass(paramContext, WelcomeActivity.class);
@@ -88,15 +91,15 @@ public class ActivityUtil {
 		if (localBitmap != null)
 			localIntent2.putExtra("android.intent.extra.shortcut.ICON",
 					localBitmap);*/
-		/*
-		 * while (true) { paramContext.sendBroadcast(localIntent2); return;
-		 * localIntent2.putExtra("android.intent.extra.shortcut.ICON_RESOURCE",
-		 * 2130837728); }
-		 */
-	}
+        /*
+         * while (true) { paramContext.sendBroadcast(localIntent2); return;
+         * localIntent2.putExtra("android.intent.extra.shortcut.ICON_RESOURCE",
+         * 2130837728); }
+         */
+    }
 
-	public static void addShortcut(Context paramContext, String paramString1,
-			String paramString2, String paramString3, Class<?> paramClass) {
+    public static void addShortcut(Context paramContext, String paramString1,
+                                   String paramString2, String paramString3, Class<?> paramClass) {
 		/*Intent localIntent1 = new Intent(
 				"com.android.launcher.action.INSTALL_SHORTCUT");
 		localIntent1.putExtra("android.intent.extra.shortcut.NAME",
@@ -110,26 +113,27 @@ public class ActivityUtil {
 		if (localBitmap != null)
 			localIntent1.putExtra("android.intent.extra.shortcut.ICON",
 					localBitmap);*/
-		/*
-		 * while (true) { paramContext.sendBroadcast(localIntent1); return;
-		 * localIntent1.putExtra("android.intent.extra.shortcut.ICON_RESOURCE",
-		 * 2130837728); }
-		 */
-	}
+        /*
+         * while (true) { paramContext.sendBroadcast(localIntent1); return;
+         * localIntent1.putExtra("android.intent.extra.shortcut.ICON_RESOURCE",
+         * 2130837728); }
+         */
+    }
 
-	public static DisplayMetrics getDisplayInfo(Activity paramActivity) {
-		return paramActivity.getResources().getDisplayMetrics();
-	}
+    public static DisplayMetrics getDisplayInfo(Activity paramActivity) {
+        return paramActivity.getResources().getDisplayMetrics();
+    }
 
-	/**
-	 * 获取内存信息
-	 * @param paramContext
-	 * @param paramBoolean
-	 */
-	public static void getMemoryInfo(Context paramContext, boolean paramBoolean) {
-		ActivityManager localActivityManager = (ActivityManager) paramContext
-				.getSystemService("activity");
-		//获取内存信息
+    /**
+     * 获取内存信息
+     *
+     * @param paramContext
+     * @param paramBoolean
+     */
+    public static void getMemoryInfo(Context paramContext, boolean paramBoolean) {
+        ActivityManager localActivityManager = (ActivityManager) paramContext
+                .getSystemService("activity");
+        //获取内存信息
 		/*ActivityManager.MemoryInfo localMemoryInfo = new ActivityManager.MemoryInfo();
 		localActivityManager.getMemoryInfo(localMemoryInfo);
 		int availMem = (int) (localMemoryInfo.availMem / 1048576L);
@@ -233,128 +237,129 @@ public class ActivityUtil {
 
 			}
 		}*/
-	}
-	/**
-	 * 加载配置文件变量
-	 * @param paramContext
-	 * @param paramName
-	 * @param paramDefaultValue
-	 * @return
-	 */
-	public static String getPreference(Context paramContext,
-			String paramName, String paramDefaultValue) {
-		return paramContext.getSharedPreferences(
-				AppConstant.getProjectPackage(paramContext), 0).getString(
-				paramName, paramDefaultValue);
-	}
+    }
+
+    /**
+     * 加载配置文件变量
+     *
+     * @param paramContext
+     * @param paramName
+     * @param paramDefaultValue
+     * @return
+     */
+    public static String getPreference(Context paramContext,
+                                       String paramName, String paramDefaultValue) {
+        return paramContext.getSharedPreferences(
+                AppConstant.getProjectPackage(paramContext), 0).getString(
+                paramName, paramDefaultValue);
+    }
 
 
+    /**
+     * 获取版本Code
+     *
+     * @param paramContext
+     * @return
+     */
+    public static int getVersionCode(Context paramContext) {
+        String str = AppConstant.getProjectPackage(paramContext);
+        try {
+            int j = paramContext.getPackageManager().getPackageInfo(str, 16384).versionCode;
+            return j;
+        } catch (PackageManager.NameNotFoundException localNameNotFoundException) {
+            return 0;
+        }
+    }
 
-	/**
-	 * 获取版本Code
-	 * 
-	 * @param paramContext
-	 * @return
-	 */
-	public static int getVersionCode(Context paramContext) {
-		String str = AppConstant.getProjectPackage(paramContext);
-		try {
-			int j = paramContext.getPackageManager().getPackageInfo(str, 16384).versionCode;
-			return j;
-		} catch (PackageManager.NameNotFoundException localNameNotFoundException) {
-			return 0;
-		}
-	}
+    public static void intoFlashActivity(Context paramContext) {
+    }
 
-	public static void intoFlashActivity(Context paramContext) {
-	}
+    public static int jsStartActivity(Context paramContext,
+                                      String[] paramArrayOfString, boolean paramBoolean) {
+        int i = 0;
+        Intent localIntent = new Intent();
+        if ((paramContext == null) || (paramArrayOfString.length <= 0)
+                || (paramArrayOfString[0].length() <= 0)
+                || (paramArrayOfString[1].length() <= 0))
+            i = -1;
+        while (true) {
 
-	public static int jsStartActivity(Context paramContext,
-			String[] paramArrayOfString, boolean paramBoolean) {
-		int i = 0;
-		Intent localIntent = new Intent();
-		if ((paramContext == null) || (paramArrayOfString.length <= 0)
-				|| (paramArrayOfString[0].length() <= 0)
-				|| (paramArrayOfString[1].length() <= 0))
-			i = -1;
-		while (true) {
+            localIntent.setComponent(new ComponentName(paramArrayOfString[0],
+                    paramArrayOfString[1]));
+            if (paramBoolean)
+                localIntent.setAction("android.intent.action.VIEW");
+            String str = paramArrayOfString[2];
+            if ((str != null) && (str.length() > 0)) {
+                String[] arrayOfString1 = str.split("\\|");
+                for (int j = 0; j < arrayOfString1.length; j++) {
+                    String[] arrayOfString2 = arrayOfString1[j].split(":");
+                    localIntent.putExtra(arrayOfString2[0].trim(),
+                            arrayOfString2[1].trim());
+                }
+            }
+            try {
+                paramContext.startActivity(localIntent);
+                i = -2;
+            } catch (Exception localException) {
 
-			localIntent.setComponent(new ComponentName(paramArrayOfString[0],
-					paramArrayOfString[1]));
-			if (paramBoolean)
-				localIntent.setAction("android.intent.action.VIEW");
-			String str = paramArrayOfString[2];
-			if ((str != null) && (str.length() > 0)) {
-				String[] arrayOfString1 = str.split("\\|");
-				for (int j = 0; j < arrayOfString1.length; j++) {
-					String[] arrayOfString2 = arrayOfString1[j].split(":");
-					localIntent.putExtra(arrayOfString2[0].trim(),
-							arrayOfString2[1].trim());
-				}
-			}
-			try {
-				paramContext.startActivity(localIntent);
-				i = -2;
-			} catch (Exception localException) {
+                if (localException.getMessage().startsWith(
+                        "Unable to find explicit activity"))
+                    continue;
+                i = 1;
+            }
+            return i;
+        }
+    }
 
-				if (localException.getMessage().startsWith(
-						"Unable to find explicit activity"))
-					continue;
-				i = 1;
-			}
-			return i;
-		}
-	}
+    /**
+     * 保存配置信息
+     *
+     * @param paramContext
+     * @param paramString1
+     * @param paramString2
+     */
+    public static void savePreference(Context paramContext,
+                                      String paramString1, String paramString2) {
+        SharedPreferences.Editor localEditor = paramContext
+                .getSharedPreferences(
+                        AppConstant.getProjectPackage(paramContext), 0).edit();
+        localEditor.putString(paramString1, paramString2);
+        localEditor.commit();
+    }
 
-	/**
-	 * 保存配置信息
-	 * 
-	 * @param paramContext
-	 * @param paramString1
-	 * @param paramString2
-	 */
-	public static void savePreference(Context paramContext,
-			String paramString1, String paramString2) {
-		SharedPreferences.Editor localEditor = paramContext
-				.getSharedPreferences(
-						AppConstant.getProjectPackage(paramContext), 0).edit();
-		localEditor.putString(paramString1, paramString2);
-		localEditor.commit();
-	}
+    public static void savePreference(Context paramContext, String paramString,
+                                      boolean paramBoolean) {
+        SharedPreferences.Editor localEditor = paramContext
+                .getSharedPreferences(
+                        AppConstant.getProjectPackage(paramContext), 0).edit();
+        localEditor.putBoolean(paramString, paramBoolean);
+        localEditor.commit();
+    }
 
-	public static void savePreference(Context paramContext, String paramString,
-			boolean paramBoolean) {
-		SharedPreferences.Editor localEditor = paramContext
-				.getSharedPreferences(
-						AppConstant.getProjectPackage(paramContext), 0).edit();
-		localEditor.putBoolean(paramString, paramBoolean);
-		localEditor.commit();
-	}
+    /**
+     * 设置全屏幕
+     *
+     * @param paramActivity
+     */
+    public static void setFullscreen(Activity paramActivity) {
+        paramActivity.getWindow().setFlags(1024, 1024);
+    }
 
-	/**
-	 * 设置全屏幕
-	 * 
-	 * @param paramActivity
-	 */
-	public static void setFullscreen(Activity paramActivity) {
-		paramActivity.getWindow().setFlags(1024, 1024);
-	}
+    /**
+     * 设置输入法隐藏
+     *
+     * @param paramActivity
+     */
+    public static void setInputMethodHidden(Activity paramActivity) {
+        paramActivity.getWindow().setSoftInputMode(3);
+    }
 
-	/**
-	 * 设置输入法隐藏
-	 * 
-	 * @param paramActivity
-	 */
-	public static void setInputMethodHidden(Activity paramActivity) {
-		paramActivity.getWindow().setSoftInputMode(3);
-	}
-
-	/**
-	 * 设置窗口无标题
-	 * 
-	 * @param paramActivity
-	 */
-	public static void setNoTitle(Activity paramActivity) {
-		paramActivity.requestWindowFeature(Window.FEATURE_NO_TITLE);
-	}
+    /**
+     * 设置窗口无标题
+     *
+     * @param paramActivity
+     */
+    public static void setNoTitle(Activity paramActivity) {
+        paramActivity.requestWindowFeature(Window.FEATURE_NO_TITLE);
+    }
 }

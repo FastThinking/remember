@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.abc.m.commons.buscomponent.permission.RxPermissions;
@@ -38,6 +39,7 @@ public class Act_login extends BaseActivity {
     private EditText et_password;
     private LinearLayout ll_login;
     private Handler mHandler;
+    private TextView tv_num;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,14 +68,14 @@ public class Act_login extends BaseActivity {
         cb_rememberPwd = (CheckBox) this.findViewById(R.id.cb_rememberPwd);
         et_userName = (EditText) this.findViewById(R.id.et_userName);
         et_password = (EditText) this.findViewById(R.id.et_password);
-
+        tv_num = (TextView) this.findViewById(R.id.tv_num);
+        tv_num.setText("版本号：" + ActivityUtil.getSoftwareVersion(this));
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (checkLogin()) {
                     ActivityUtil.DirectToActivity(Act_login.this, PasswordListActivity.class);
                     Act_login.this.finish();
-
                 } else {
                     Toast toast = Toast.makeText(Act_login.this, "验证失败！", Toast.LENGTH_LONG);
                     toast.show();
