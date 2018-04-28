@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 
-import com.ebt.m.commons.buscomponent.permission.RxPermissions;
+import com.abc.m.commons.buscomponent.permission.RxPermissions;
 import com.lzx.allenLee.R;
 import com.lzx.allenLee.base.AppActivityManager;
 import com.lzx.allenLee.base.BaseActivity;

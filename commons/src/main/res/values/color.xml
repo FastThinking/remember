@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- commonbar bg color -->
+    <color name="common_bg_bar">#37ac68</color>
+    <color name="common_bg_bar_dark">#2B8652</color>
+    <color name="common_text_light">#aaaaaa</color>
+    <color name="common_text_color">#666666</color>
+    <color name="common_text_dark">#444444</color>
+    <color name="common_divider_color">#dddddd</color>
+    <color name="common_page_bg">#f5f5f5</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

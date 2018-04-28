@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="share_install_wechat_tips">请安装微信</string>
+
+    <string name="network_fail">网络异常，请检查手机网络设置</string>
+    <string name="data_parse_error">数据解析失败</string>
+    <string name="net_timeout">网络连接超时</string>
+
+    <string name="text_foot_end">已经到底了</string>
+    <string name="text_foot_error">加载失败，点击重试</string>
+    <string name="text_foot_loading">正在努力加载...</string>
+    <string name="null_label">列表为空</string>
+</resources>

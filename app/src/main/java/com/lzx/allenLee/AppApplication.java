@@ -5,7 +5,7 @@ import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
 
-import com.ebt.m.commons.buscomponent.permission.RxPermissions;
+import com.abc.m.commons.buscomponent.permission.RxPermissions;
 import com.lzx.allenLee.base.AppActivityManager;
 import com.lzx.allenLee.global.Global;
 import com.lzx.allenLee.os.AppConstant;

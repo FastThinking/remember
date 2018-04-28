@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.ebt.m.commons.buscomponent.permission.RxPermissions;
+import com.abc.m.commons.buscomponent.permission.RxPermissions;
 import com.lzx.allenLee.R;
 import com.lzx.allenLee.base.BaseActivity;
 import com.lzx.allenLee.global.Global;
