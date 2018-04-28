@@ -8,12 +8,12 @@ android {
             storePassword 'tiger@1986'
         }
     }
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    compileSdkVersion java.lang.Integer.parseInt(ANDROID_COMPILE_SDK_VERSION)
+    buildToolsVersion ANDROID_BUILD_TOOL_VERSION
     defaultConfig {
         applicationId "com.lzx.allenLee"
         minSdkVersion 15
-        targetSdkVersion 27
+        targetSdkVersion ANDROID_TARGET_SDK_VERSION
         multiDexEnabled true
         versionCode 1
         versionName "1.0.0"
