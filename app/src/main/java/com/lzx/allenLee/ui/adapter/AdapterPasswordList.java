@@ -1,8 +1,5 @@
 package com.lzx.allenLee.ui.adapter;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +10,9 @@ import android.widget.TextView;
 import com.lzx.allenLee.R;
 import com.lzx.allenLee.bean.PasswordInfo;
 import com.lzx.allenLee.util.encryptionUtil.EncryptUtil;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AdapterPasswordList extends BaseAdapter {
     List<PasswordInfo> list;
@@ -58,7 +58,7 @@ public class AdapterPasswordList extends BaseAdapter {
             holder.tv_userName = (TextView) convertView.findViewById(R.id.tv_userName);
             holder.tv_password = (TextView) convertView.findViewById(R.id.tv_password);
             holder.tv_isLogin = (TextView) convertView.findViewById(R.id.tv_isLogin);
-
+            holder.tv_des = (TextView) convertView.findViewById(R.id.tv_des);
             convertView.setTag(holder);
 
         } else {
@@ -70,6 +70,7 @@ public class AdapterPasswordList extends BaseAdapter {
         holder.tv_userName.setText(EncryptUtil.decrypt(list.get(position).getUserName()));
         holder.tv_password.setText(EncryptUtil.decrypt(list.get(position).getPassword()));
         holder.tv_isLogin.setText(list.get(position).getIsLogin());
+        holder.tv_des.setText(list.get(position).getDes());
         return convertView;
     }
 
@@ -84,6 +85,7 @@ public class AdapterPasswordList extends BaseAdapter {
         public TextView tv_userName;
         public TextView tv_password;
         public TextView tv_isLogin;
+        public TextView tv_des;
     }
 
     public void setList(List<PasswordInfo> mList) {

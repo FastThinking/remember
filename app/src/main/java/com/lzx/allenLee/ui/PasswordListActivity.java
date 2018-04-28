@@ -1,8 +1,5 @@
 package com.lzx.allenLee.ui;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
@@ -22,7 +19,6 @@ import android.view.View.OnClickListener;
 import android.view.View.OnCreateContextMenuListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -40,6 +36,8 @@ import com.lzx.allenLee.ui.adapter.AdapterPasswordList;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+
+import java.util.List;
 
 public class PasswordListActivity extends BaseActivity implements OnItemClickListener {
     private EditText et_name;
@@ -152,18 +150,14 @@ public class PasswordListActivity extends BaseActivity implements OnItemClickLis
         TextView tv_userName = (TextView) v.findViewById(R.id.tv_userName);
         TextView tv_password = (TextView) v.findViewById(R.id.tv_password);
         TextView tv_isLogin = (TextView) v.findViewById(R.id.tv_isLogin);
+        TextView tv_des = (TextView) v.findViewById(R.id.tv_des);
         PasswordInfo info = new PasswordInfo();
         info.setUserId(Integer.parseInt(tv_userId.getText().toString()));
         info.setTitle(tv_title.getText().toString());
         info.setUserName(tv_userName.getText().toString());
         info.setPassword(tv_password.getText().toString());
         info.setIsLogin(tv_isLogin.getText().toString());
-        // boolean rs =
-        // AppServiceManager.getInstance(PasswordListActivity.this).updatePassword(info);
-        // adapter = (AdapterPasswordList)lv_password.getAdapter();
-        // if(!adapter.isEmpty()) {
-        // adapter.notifyDataSetChanged();// 实现数据的实时刷新
-        // }
+        info.setDes(tv_des.getText().toString());
 
         Intent intent = new Intent();
         intent.putExtra("com.lzx.allenLee.ui.PasswordListActivity.PasswordInfo", info);

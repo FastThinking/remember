@@ -1,8 +1,6 @@
 package com.lzx.allenLee.ui;
 
 
-import java.io.FileNotFoundException;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,10 +19,12 @@ import com.lzx.allenLee.util.encryptionUtil.EncryptUtil;
 
 import org.greenrobot.eventbus.EventBus;
 
+import java.io.FileNotFoundException;
+
 public class PasswordAddActivity extends BaseActivity {
     private Button btn_add;
     private Button btn_return;
-    private EditText et_title, et_userName, et_password;
+    private EditText et_title, et_userName, et_password, et_des;
     private TextView tv_userId, tv_appTitle;
     private CheckBox cb_isLogin;
     private PasswordInfo passInfo;
@@ -71,6 +71,7 @@ public class PasswordAddActivity extends BaseActivity {
         et_title.setText(info.getTitle() == null ? "" : info.getTitle());
         et_userName.setText(info.getUserName() == null ? "" : info.getUserName());
         et_password.setText(info.getPassword() == null ? "" : info.getPassword());
+        et_des.setText(info.getDes() == null ? "" : info.getDes());
         cb_isLogin.setChecked(info.getIsLogin().equals("true") ? true : false);
         if (info.getUserName().equals("admin")) {
             cb_isLogin.setChecked(true);
@@ -115,6 +116,7 @@ public class PasswordAddActivity extends BaseActivity {
         String title = et_title.getText().toString();
         String userName = et_userName.getText().toString();
         String password = et_password.getText().toString();
+        String des = et_des.getText().toString();
         boolean isChecked = cb_isLogin.isChecked();
         if (title == null || title.length() == 0) {
             return false;
@@ -127,6 +129,7 @@ public class PasswordAddActivity extends BaseActivity {
                 passInfo = new PasswordInfo();
             }
             passInfo.setTitle(title);
+            passInfo.setDes(des);
             try {
                 passInfo.setUserName(EncryptUtil.encrypt(userName));
                 passInfo.setPassword(EncryptUtil.encrypt(password));
@@ -167,6 +170,7 @@ public class PasswordAddActivity extends BaseActivity {
         et_title = (EditText) this.findViewById(R.id.et_title);
         et_userName = (EditText) this.findViewById(R.id.et_userName);
         et_password = (EditText) this.findViewById(R.id.et_password);
+        et_des = (EditText) this.findViewById(R.id.et_des);
         tv_userId = (TextView) this.findViewById(R.id.tv_userId);
         tv_appTitle = (TextView) this.findViewById(R.id.tv_appTitle);
         cb_isLogin = (CheckBox) this.findViewById(R.id.cb_isLogin);
