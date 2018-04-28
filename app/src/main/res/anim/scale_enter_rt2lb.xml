@@ -7,7 +7,7 @@
         android:duration="500"
         android:fromXScale="0.0"
         android:fromYScale="0.0"
-        android:interpolator="@android:res/anim/accelerate_interpolator"
+        android:interpolator="@android:anim/accelerate_interpolator"
         android:pivotX="0"
         android:pivotY="0"
         android:repeatCount="0"
