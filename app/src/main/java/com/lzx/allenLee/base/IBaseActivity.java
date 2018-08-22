@@ -1,9 +1,7 @@
 package com.lzx.allenLee.base;
 
 import android.app.Application;
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.SharedPreferences;
 
 /**
  * Activity的支持类接口，主要定义了Activity中常用的功能
@@ -22,17 +20,7 @@ public interface IBaseActivity {
 	 * 初始化异常捕获处理类
 	 */
 	public abstract void initUncaughtExceptionHandler();
-	
-	/**
-	 * 开启服务
-	 */
-//	public abstract void startService();
 
-	/**
-	 * 停止服务
-	 */
-//	public abstract void stopService();
-	
 	public abstract void isExitApp();
 
 	/**
@@ -73,10 +61,10 @@ public interface IBaseActivity {
 	 */
 //	public abstract ProgressDialog getProgressDialog();
 
-	/**
-	 * 返回当前Activity上下文.
-	 */
-	public abstract Context getContext();
+//	/**
+//	 * 返回当前Activity上下文.
+//	 */
+//	public abstract Context getContext();
 
 	/**
 	 * 获取当前登录用户的SharedPreferences配置.
@@ -95,18 +83,4 @@ public interface IBaseActivity {
 	 */
 //	public void setUserOnlineState(boolean isOnline);
 
-	/**
-	 * 
-	 * 发出Notification的method.
-	 * 
-	 * @param iconId
-	 *            图标
-	 * @param contentTitle
-	 *            标题
-	 * @param contentText
-	 *            内容
-	 * @param activity
-	 */
-//	public void PushNotification(int iconId, String contentTitle,
-//			String contentText, Class<?> activity, String from);
 }
