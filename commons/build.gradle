@@ -2,7 +2,6 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion java.lang.Integer.parseInt(ANDROID_COMPILE_SDK_VERSION)
-    buildToolsVersion ANDROID_BUILD_TOOL_VERSION
 
     defaultConfig {
         minSdkVersion 15
@@ -25,34 +24,35 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     //commons
-    compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.squareup.retrofit2:retrofit:2.3.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
-    compile 'com.orhanobut:logger:1.15'
-    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
-    compile 'com.android.support:design:27.0.0'
-    compile 'com.android.support:recyclerview-v7:27.0.0' 
-    compile 'com.android.support:support-v4:27.0.0'
-    compile 'com.android.support:appcompat-v7:27.0.0'
-    compile 'com.android.support:cardview-v7:27.0.0'
-    compile 'com.google.code.gson:gson:2.7'
+    api 'org.greenrobot:eventbus:3.0.0'
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    api 'com.orhanobut:logger:1.15'
+    api 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    api 'com.android.support:design:27.0.0'
+    api 'com.android.support:recyclerview-v7:27.0.0'
+    api 'com.android.support:support-v4:27.0.0'
+    api 'com.android.support:appcompat-v7:27.0.0'
+    api 'com.android.support:cardview-v7:27.0.0'
+    api 'com.google.code.gson:gson:2.7'
 
 
     //thirty login and share
-    compile files('libs/open_sdk_r5756_lite.jar')
-    compile files('libs/weiboSDKCore_3.1.4.jar')
-    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    api files('libs/open_sdk_r5756_lite.jar')
+    api files('libs/weiboSDKCore_3.1.4.jar')
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
 
     //rxlifecycle
-    compile 'com.trello.rxlifecycle2:rxlifecycle-android-lifecycle:2.2.1'
-    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
-    compile 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.1'
+    api 'com.trello.rxlifecycle2:rxlifecycle-android-lifecycle:2.2.1'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
+    api 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.1'
 }
